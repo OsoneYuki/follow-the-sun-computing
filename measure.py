@@ -8,7 +8,7 @@ def measure_cpu_usage(pid, duration):
     start_time = time.time()
 
     while time.time() - start_time < duration:
-        cpu_percent = process.cpu_percent(interval=0.1)
+        cpu_percent = process.cpu_percent(interval=0.01)
         cpu_percent_list.append(cpu_percent)
 
     return cpu_percent_list
@@ -36,7 +36,7 @@ process = subprocess.Popen(['python', program_path] + program_args)
 pid = process.pid
 
 # CPU使用率とメモリ使用量を測定する時間（秒）
-measurement_duration = 10
+measurement_duration = 0.1
 
 # CPU使用率を測定
 cpu_usage_list = measure_cpu_usage(pid, measurement_duration)

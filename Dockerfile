@@ -7,7 +7,7 @@ WORKDIR /app
 # ソースコードをコンテナ内の/appディレクトリにコピー
 COPY primenumbers.py /app/primenumbers.py
 COPY measure.py /app/measure.py
-COPY code_block.py /app/code_block.py
+COPY block_count.py /app/block_count.py
 
 
 # 必要なパッケージをインストール
