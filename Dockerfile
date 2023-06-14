@@ -1,13 +1,14 @@
 # ベースイメージを指定
-FROM python:3.9
+FROM python:3.11
 
 # ワーキングディレクトリを設定
 WORKDIR /app
 
 # ソースコードをコンテナ内の/appディレクトリにコピー
 COPY primenumbers.py /app/primenumbers.py
-COPY measure.py /app/measure.py
+COPY measure_1.py /app/measure_1.py
 COPY block_count.py /app/block_count.py
+COPY measure_2.py /app/measure_2.py
 
 
 # 必要なパッケージをインストール

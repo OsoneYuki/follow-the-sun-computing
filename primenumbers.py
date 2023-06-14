@@ -7,7 +7,7 @@ def is_prime(n):
     return True
 
 primes = []
-for num in range(1, 101):
+for num in range(1, 10000):
     if is_prime(num):
         primes.append(num)
 
