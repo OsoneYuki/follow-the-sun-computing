@@ -5,6 +5,25 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
+"""実際のデータがある場合
+import csv
+
+# データを格納するための空のリストを作成
+cpu_performance = []
+memory_capacity = []
+code_lines = []
+processing_time = []
+
+# CSVファイルを読み込み、データをリストに追加
+with open('data.csv', newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        cpu_performance.append(float(row['cpu_performance']))
+        memory_capacity.append(float(row['memory_capacity']))
+        code_lines.append(float(row['code_lines']))
+        processing_time.append(float(row['processing_time']))
+"""
+
 # ダミーデータの生成（実際のデータに置き換える）
 cpu_performance = np.random.rand(100, 1)  # 100個のCPU性能のランダムなデータ
 memory_capacity = np.random.rand(100, 1)   # 100個のメモリ容量のランダムなデータ
