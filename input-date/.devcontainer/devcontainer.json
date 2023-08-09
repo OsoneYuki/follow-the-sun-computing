@@ -4,6 +4,6 @@
   "dockerFile": "Dockerfile",
   "runArgs": [ 
       "--cpus", "4",
-      "--memory", "1g"
+      "--memory", "2.5g"
   ]
 }

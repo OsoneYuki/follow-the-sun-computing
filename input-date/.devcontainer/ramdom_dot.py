@@ -5,13 +5,14 @@ import os
 
 # CPUとメモリ情報
 cpu_info = 4
-memory_info = 1
+memory_info = 2.5
 
 # データフレームの初期化
 df = pd.DataFrame(columns=["cpu_info", "memory_info", "size", "elapsed_time"])
 
-# size＝1000～10000まで1000間隔で行列の計算を行う
-for size in range(1000, 10001, 1000):
+# size=1000～10000まで1000間隔で行列の計算を行う
+for size in range(100, 10000, 100):  # 0ではなく100から開始
+
     # 大規模な行列の生成
     A = np.random.rand(size, size)
     B = np.random.rand(size, size)
