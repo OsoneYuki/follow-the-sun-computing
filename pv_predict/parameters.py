@@ -26,4 +26,4 @@ SEED_QR = 0
 # - (1) 'SolarIrradiation', (2) 'hourSin', (3) 'hourCos', 'yearCos', 'CloudCover',....
 #       'yearSin', 'Humidity', 'Temp', 'monthCos', 'WindSpeed', 'daySin',
 #       'dayCos', 'monthSin', (14) 'Rain'
-NUMBER_OF_FEATURES = 4
+NUMBER_OF_FEATURES = 13

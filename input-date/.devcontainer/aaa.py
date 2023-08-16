@@ -1,12 +1,16 @@
 import pandas as pd
 
 # CSVファイルの読み込み
-filename = "result.csv"
-df = pd.read_csv(filename)
+df = pd.read_csv('input_data2022.csv')
 
-# cpu_infoとmemory_infoの列を8に変更
-df['cpu_info'] = 8
-df['memory_info'] = 8
+# ヘッダーの取得
+header = df.columns
 
-# 変更をCSVファイルに書き戻す
-df.to_csv(filename, index=False)
+# 最初の100行のデータ部分の取得
+subset_data = df.iloc[:10000]
+
+# 新しいDataFrameの作成
+new_df = pd.DataFrame(subset_data, columns=header)
+
+# CSVファイルとして保存
+new_df.to_csv('input_data2022_10000.csv', index=False)
